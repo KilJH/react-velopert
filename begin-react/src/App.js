@@ -60,6 +60,7 @@ function App() {
 		username: '',
 		email: '',
 	});
+
 	const [state, dispatch] = useReducer(reducer, initialState);
 	const nextId = useRef(4);
 
