@@ -1,7 +1,7 @@
 import About from './About';
-import './App.css';
 import Home from './Home';
 import { Route, Link } from 'react-router-dom';
+import Profile from './Profile';
 
 function App() {
 	return (
@@ -17,6 +17,7 @@ function App() {
 			<hr />
 			<Route path='/' component={Home} exact />
 			<Route path='/about' component={About} />
+			<Route path='/profiles/:username' component={Profile} />
 		</div>
 	);
 }
