@@ -4,8 +4,9 @@ import { createStore } from 'redux';
 import App from './App';
 import rootReducer from './modules';
 import { Provider } from 'react-redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, composeWithDevTools());
 
 ReactDOM.render(
 	<Provider store={store}>
