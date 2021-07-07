@@ -10,6 +10,8 @@ import ReduxThunk from 'redux-thunk';
 import { Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 
+// axios.defaults.baseURL = process.env.NODE_ENV === 'development' ? '/' : 'https://api.velog.io/';
+
 const customHistory = createBrowserHistory();
 
 const store = createStore(
@@ -17,7 +19,7 @@ const store = createStore(
 	composeWithDevTools(
 		applyMiddleware(
 			ReduxThunk.withExtraArgument({ history: customHistory }),
-			logger
+			logger // logger는 항상 마지막에
 		)
 	)
 );
